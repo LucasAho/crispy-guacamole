@@ -1,14 +1,13 @@
-app.get("/:path", (req,res) => {
-    let path = req.params.path; 
-    switch(path) {
-        case "/":
-            res.sendFile(path.join(__dirname, "home.html"));
-            break;
-        case "/survey":
-            res.sendFile(path.join(__dirname, "survey.html"))
-            break;
-    }
+//Default page
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, "home.html"));
 });
+//Survey page
+app.get('/survey', (req, res) => {
+    res.sendFile(path.join(__dirname, "survey.html"));
+});
+
+
 
 // app.listen(PORT, function() {
 //     //server listening
