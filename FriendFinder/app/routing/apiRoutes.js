@@ -1,14 +1,26 @@
-//Friends array 
-let friends = [
+// ==============================================================================
+// DEPENDENCIES
+// ==============================================================================
+let friendsData = require("../data/friends");
 
-];
-//Api get
-app.get("/api/friends", (req,res) => {
-    res.json(friends);
-});
-//Api post
-app.post('/api/friends', (req, res) => {
-    friends.push(req.body);
-    res.send("Data successfully added to friend finder");
-});
+// ======================================
+// ROUTING
+// ======================================
+module.exports = app => {
+
+    //Friends api
+    app.get("/api/friends", (req,res) => {
+        res.json(friendsData);
+    });
+    
+    //Api post
+    app.post('/api/friends', (req, res) => {
+        friendsData.push(req.body);
+        res.send("Data successfully added to friend finder");
+        res.json(true);
+    });
+
+}
+
+
 

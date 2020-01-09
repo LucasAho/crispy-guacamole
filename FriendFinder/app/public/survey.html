@@ -7,7 +7,8 @@
         <!--Bootstrap Ref-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!--Jquery-->
-        <script type="text/javascript" src=https://code.jquery.com/jquery-3.3.1.min.js></script>
+        <script src="https://code.jquery.com/jquery.js"></script>
+
     </head>
 
     <body>
@@ -26,7 +27,7 @@
             <!--Question 1 Field-->
             <h3 class="mt-2"><strong>Question 1</strong></h3>
             <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-            <select id="q1">
+            <select id="q1" class="ansSelect">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -38,7 +39,7 @@
             <!--Question 2 Field-->
             <h3 class="mt-2"><strong>Question 2</strong></h3class="mt-2">
             <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
-            <select id="q2">
+            <select id="q2" class="ansSelect">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -50,7 +51,7 @@
             <!--Question 3 Field-->
             <h3 class="mt-2"><strong>Question 3</strong></h3>
             <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
-            <select id="q3">
+            <select id="q3" class="ansSelect">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -62,7 +63,7 @@
             <!--Question 4 Field-->
             <h3 class="mt-2"><strong>Question 4</strong></h3 >
             <h4>You rarely do something just out of curiousity.</h4>
-            <select id="q4">
+            <select id="q4" class="ansSelect">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -74,7 +75,7 @@
             <!--Question 5 Field-->
             <h3 class="mt-2"><strong>Question 5</strong></h3>
             <h4>People rarely upset you.</h4>
-            <select id="q5">
+            <select id="q5" class="ansSelect">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -86,7 +87,7 @@
             <!--Question 6 Field-->
             <h3 class="mt-2"><strong>Question 6</strong></h3>
             <h4>It is often difficult for you to relate to other people's feelings.</h4>
-            <select id="q6">
+            <select id="q6" class="ansSelect">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -94,11 +95,12 @@
                 <option value="4">4</option>
                 <option value="5">5 (Strongly Agree)</option>
             </select>
+          
 
             <!--Question 7 Field-->
             <h3 class="mt-2"><strong>Question 7</strong></h3>
             <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
-            <select id="q7">
+            <select id="q7" class="ansSelect">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -106,11 +108,12 @@
                 <option value="4">4</option>
                 <option value="5">5 (Strongly Agree)</option>
             </select>
+           
 
             <!--Question 8 Field-->
             <h3 class="mt-2"><strong>Question 8</strong></h3>
             <h4>You rarely get carried away by fantasies and ideas.</h4>
-            <select id="q8">
+            <select id="q8" class="ansSelect">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -118,11 +121,11 @@
                 <option value="4">4</option>
                 <option value="5">5 (Strongly Agree)</option>
             </select>
-
+        
             <!--Question 9 Field-->
             <h3 class="mt-2"><strong>Question 9</strong></h3>
             <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
-            <select id="q9">
+            <select id="q9" class="ansSelect">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -130,11 +133,12 @@
                 <option value="4">4</option>
                 <option value="5">5 (Strongly Agree)</option>
             </select>
+      
 
             <!--Question 10 Field-->
             <h3 class="mt-2"><strong>Question 10</strong></h3>
             <h4>You feel more energetic after spending time with a group of people.</h4>
-            <select id="q10">
+            <select id="q10" class="ansSelect">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -142,13 +146,99 @@
                 <option value="4">4</option>
                 <option value="5">5 (Strongly Agree)</option>
             </select>
+
             <br><br>
-            <button id ="submit" class="btn btn-primary btn-lg btn-block mb-3" type="submit ">Submit</button>
+            <button id="submit" class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+            
+            <footer class="footer mt-4">
+                <div class="container">
+                    <p>
+                        <a href="/api/friends">API Friends List</a>
+                        |
+                        <a href="https://github.com/LucasAho/crispy-guacamole">Github Repo</a>
+                    </p>
+                </div>
+            </footer>
+
+            <!--Modal-->
+            <div id="results-modal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" type="button" data-dismiss="modal">×</button>
+                            <h2 class="modal-title"><strong>Best Match</strong></h2>
+                        </div>
+                        <div class="modal-body">
+                            <h2 id="match-name"></h2>
+                            <img id="match-img" src="">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>>
+                        </div>
+                     </div>
+                </div>
+            </div>
+  
         </div>
     </body>
 
-
-
-
-
 </html>
+
+<script type="text/javascript">
+
+    $("#submit").on("click", function(event) {
+        event.preventDefault();
+        
+        function validateForm() {
+            var isValid = true;
+            $(".form-control").each(function() {
+                if ($(this).val() === "") {
+                    isValid = false;
+                }
+            });
+
+            $(".ansSelect").each(function(){
+                if ($(this).val() === "") {
+                    isValid = false;
+                }
+            });
+            return isValid;
+        }
+        if (validateForm()) {
+            var newFriend = {
+                name: $("#name").val().trim(),
+                photoUrl: $("#photo").val().trim(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val(),
+                ]
+            }
+            console.log(newFriend);
+
+            $.post("api/friends", newFriend, 
+                function(data) {
+
+                    $("#match-name").text(data.name);
+                    $("#match-img").attr("src", data.photo);
+
+                    $("#results-modal").modal("toggle");
+            });
+        } else {
+            alert("Please fill out all fields before submitting!");
+        }
+
+        
+
+        
+    });
+
+</script>
+             

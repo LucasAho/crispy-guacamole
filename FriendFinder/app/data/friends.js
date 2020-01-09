@@ -1,8 +1,21 @@
-var express = require("express");
-var path = require("path");
-
-var friends = [
+var friendsArray = [
     {
-        "name": "Am"
+        "name": "Nathan",
+        "photo": "httpslink.jpg",
+        "scores": [
+            5,
+            1,
+            4,
+            4,
+            5,
+            1,
+            2,
+            5,
+            4,
+            1
+        ]
     }
-]
+];
+
+module.exports = friendsArray;
+
