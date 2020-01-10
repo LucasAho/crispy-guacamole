@@ -7,7 +7,7 @@
         <!--Bootstrap Ref-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!--Jquery-->
-        <script src="https://code.jquery.com/jquery.js"></script>
+        <script type="text/javascript" src=https://code.jquery.com/jquery-3.3.1.min.js></script>
 
     </head>
 
@@ -148,7 +148,7 @@
             </select>
 
             <br><br>
-            <button id="submit" class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+            <button id="submit" class="btn btn-primary btn-lg btn-block" type="button">Submit</button>
             
             <footer class="footer mt-4">
                 <div class="container">
@@ -181,64 +181,63 @@
   
         </div>
     </body>
+    <!--AJAX Reference-->   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <script type="text/javascript">
+
+        $("#submit").on("click", function(event) {
+            event.preventDefault();
+            
+            function validateForm() {
+                var isValid = true;
+                $(".form-control").each(function() {
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+    
+                $(".ansSelect").each(function(){
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+                return isValid;
+            }
+            if (validateForm()) {
+                var newFriend = {
+                    name: $("#name").val().trim(),
+                    photoUrl: $("#photo").val().trim(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val(),
+                    ]
+                }
+    
+                $.post("/api/friends", newFriend, data => {
+                        console.log("Hello?");
+                        alert("Hello");
+                        // $("#match-name").text(data.name);
+                        // $("#match-img").attr("src", data.photo);
+    
+                        // $("#results-modal").modal("toggle");
+                });
+            } else {
+                alert("Please fill out all fields before submitting!");
+            }        
+        });
+    
+    </script>
 </html>
 
-<script type="text/javascript">
 
-    $("#submit").on("click", function(event) {
-        event.preventDefault();
-        
-        function validateForm() {
-            var isValid = true;
-            $(".form-control").each(function() {
-                if ($(this).val() === "") {
-                    isValid = false;
-                }
-            });
 
-            $(".ansSelect").each(function(){
-                if ($(this).val() === "") {
-                    isValid = false;
-                }
-            });
-            return isValid;
-        }
-        if (validateForm()) {
-            var newFriend = {
-                name: $("#name").val().trim(),
-                photoUrl: $("#photo").val().trim(),
-                scores: [
-                    $("#q1").val(),
-                    $("#q2").val(),
-                    $("#q3").val(),
-                    $("#q4").val(),
-                    $("#q5").val(),
-                    $("#q6").val(),
-                    $("#q7").val(),
-                    $("#q8").val(),
-                    $("#q9").val(),
-                    $("#q10").val(),
-                ]
-            }
-            console.log(newFriend);
-
-            $.post("api/friends", newFriend, 
-                function(data) {
-
-                    $("#match-name").text(data.name);
-                    $("#match-img").attr("src", data.photo);
-
-                    $("#results-modal").modal("toggle");
-            });
-        } else {
-            alert("Please fill out all fields before submitting!");
-        }
-
-        
-
-        
-    });
-
-</script>
              
