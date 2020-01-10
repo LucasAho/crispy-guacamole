@@ -17,8 +17,8 @@ module.exports = app => {
     
     //Api post
     app.post('/api/friends', (req, res) => {
+        res.json(friendsData.friendFinder(req.body));   
         friendsData.friendsArray.push(req.body);
-        console.log(friendsData.friendFinder(req.body));   
     });
 
 

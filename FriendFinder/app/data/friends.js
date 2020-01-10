@@ -1,7 +1,7 @@
 var friendsArray = [
         {
         "name": "Jacob",
-        "photo": "httpslink.jpg",
+        "photo": "https://assets1.ignimgs.com/2019/12/01/twitter-in-stream-wide-baby-yoda-soup-mandalorian-1575172376899.jpg",
         "scores": [
             1,
             3,
@@ -17,7 +17,7 @@ var friendsArray = [
     },
     {
         "name": "Nathan",
-        "photo": "httpslink.jpg",
+        "photo": "https://assets1.ignimgs.com/2019/12/01/twitter-in-stream-wide-baby-yoda-soup-mandalorian-1575172376899.jpg",
         "scores": [
             5,
             1,
@@ -33,7 +33,7 @@ var friendsArray = [
     },
     {
         "name": "Tarkin",
-        "photo": "httpslink.jpg",
+        "photo": "https://assets1.ignimgs.com/2019/12/01/twitter-in-stream-wide-baby-yoda-soup-mandalorian-1575172376899.jpg",
         "scores": [
             5,
             4,
@@ -49,7 +49,7 @@ var friendsArray = [
     },
     {
         "name": "Snarf",
-        "photo": "httpslink.jpg",
+        "photo": "https://assets1.ignimgs.com/2019/12/01/twitter-in-stream-wide-baby-yoda-soup-mandalorian-1575172376899.jpg",
         "scores": [
             1,
             2,
