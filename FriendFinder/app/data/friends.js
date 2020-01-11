@@ -1,5 +1,20 @@
 var friendsArray = [
-
+    {
+        name: "Baby Yoda",
+        photo: "https://assets1.ignimgs.com/2019/12/01/twitter-in-stream-wide-baby-yoda-soup-mandalorian-1575172376899.jpg",
+        scores: [
+            5,
+            1,
+            4,
+            1,
+            4,
+            3,
+            2,
+            2,
+            4,
+            2
+        ]
+    }
 ];
 
 friendFinder = (user) => {
