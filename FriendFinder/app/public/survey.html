@@ -214,7 +214,7 @@
             if (validateForm()) {
                 var newFriend = {
                     name: $("#name").val().trim(),
-                    photoUrl: $("#photo").val().trim(),
+                    photo: $("#photo").val().trim(),
                     scores: [
                         $("#q1").val(),
                         $("#q2").val(),
@@ -231,7 +231,7 @@
     
                 $.post("/api/friends", newFriend, data => {
                     $("#match-name").text(data.name);
-                    $("#match-img").attr("src", data.photoUrl);
+                    $("#match-img").attr("src", data.photo);
                     $("#modal-match").modal('show');
 
                 });
