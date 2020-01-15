@@ -14,7 +14,40 @@ var friendsArray = [
             4,
             2
         ]
+    },
+    {
+        "name": "Elizabeth",
+        "photo": "https://i.ibb.co/3Sc3M2d/6-BA6-B5-BD-9-B27-4-D96-A3-F1-47-C0-B6086-F50.jpg",
+        "scores": [
+            "3",
+            "2",
+            "4",
+            "3",
+            "3",
+            "1",
+            "4",
+            "3",
+            "5",
+            "2"
+        ]
+    },
+    {
+        "name": "Lucas Aho",
+        "photo": "https://avatars1.githubusercontent.com/u/15681188?s=460&v=4",
+        "scores": [
+            "5",
+            "4",
+            "2",
+            "1",
+            "2",
+            "4",
+            "4",
+            "2",
+            "1",
+            "3"
+        ]
     }
+
 ];
 
 friendFinder = (user) => {
